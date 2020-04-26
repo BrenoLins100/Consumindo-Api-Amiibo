@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <script src="app.js"></script>
+
+    <title>Pesquisa Amiibo</title>
+
+    <style>
+        *{
+            font-family: 'Titillium Web', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .barra{
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .barra input{
+            flex: 0 0 90%;
+            padding: 10px;
+            box-shadow: 0 0 6px 0 rgba(0,0,0,0.25);
+            border: 0;
+            outline: none;
+            caret-color: #e79908f1;
+            margin: 10px;
+        }
+        .row{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            flex-wrap: wrap;
+        }
+
+        .col{
+            margin: 5px;
+            transition: all 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530);
+        }
+        .content{
+            box-shadow: 0 0 6px 0 rgba(0,0,0,0.25);
+            padding: 20px;
+        }
+        .content span{
+            display: block;
+            line-height: 1.4;
+        }
+        .serie{
+            color: #e79908f1;
+            font-weight: 700;
+        }
+        .perso,
+        .serieJogo{
+            font-weight: 600;
+            color: #545454;
+        }
+        .content img{
+            margin: 10px auto;
+            max-width: 100%;
+            display: block;
+            height: 300px;
+        }
+        @media (min-width:768px){
+            .col{
+                flex: 0 0 33.333333%;
+                max-width: 30%;
+            }
+        }
+        @media (max-width:768px){
+            .barra input{
+                margin: 8px;
+                max-width: 78%;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <div class="barra">
+        <input onkeyup="search();" type="text" id="buscar" placeholder="Pesquisa: mario,toad,pikachu,mewtwo..etc">
+    </div>
+
+    <div class="row"></div>
+
+</body>
+</html>
